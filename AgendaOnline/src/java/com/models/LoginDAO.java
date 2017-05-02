@@ -14,7 +14,7 @@ import com.utils.Log;
 
 /**
  *
- * @author moust
+ * @author Julio MANCHA HDZ 
  */
 public class LoginDAO {
     private Connection conexion;
@@ -86,6 +86,23 @@ public class LoginDAO {
         }
         
     }
+//    public int obtenerSemestre(User user){
+//        try{
+//            abrirConexion();
+//            Statement stmt = conexion.createStatement();
+//            String select = "select USERNAME, semestre from REGISTRO where SEMESTRE = '" + user.getSemestre()+"'"; // and NOMBRE like '%" + user.getName() +"%'";
+//            ResultSet mensajes = stmt.executeQuery(select);
+//           // while(mensajes.next()){
+//                user.setSemestre(mensajes.getInt("SEMESTRE"));
+//                ///user.setName(mensajes.getString("NOMBRE"));
+//           // }
+//            cerrarConexion();
+//            return user.getSemestre();
+//        }catch(Exception e){
+//           
+//            return 999999;
+//        }
+//    }
         
     
 }

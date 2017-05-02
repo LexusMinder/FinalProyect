@@ -14,7 +14,7 @@ public class User {
     private String username;
     private String password;
     private String name;
-    private String semestre;
+    private int semestre;
 
     /**
      * @return the username
@@ -61,15 +61,13 @@ public class User {
     /**
      * @return the semestre
      */
-    public String getSemestre() {
+    public int getSemestre() {
         return semestre;
     }
-
-    /**
-     * @param semestre the semestre to set
-     */
-    public void setSemestre(String semestre) {
+    
+    public void setSemestre(int semestre){
         this.semestre = semestre;
     }
     
+   
 }
