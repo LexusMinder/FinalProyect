@@ -2,19 +2,19 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>LoginController</servlet-name>
-        <servlet-class>com.doo.dl.controllers.LoginController</servlet-class>
+        <servlet-class>com.controllers.LoginController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegisterController</servlet-name>
-        <servlet-class>com.doo.dl.controllers.RegisterController</servlet-class>
+        <servlet-class>com.controllers.RegisterController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LogoutController</servlet-name>
-        <servlet-class>com.doo.dl.controllers.LogoutController</servlet-class>
+        <servlet-class>com.controllers.LogoutController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DataController</servlet-name>
-        <servlet-class>com.doo.dl.controllers.DataController</servlet-class>
+        <servlet-class>com.controllers.DataController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>

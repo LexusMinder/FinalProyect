@@ -15,7 +15,9 @@
         <h1>Bienvenido</h1>
         <h2>La siguiente pagina web sera una agenda para estudiantes especificamente, esta se encargara de agrupar 
         dichas notas, pendientes o tareas, y mostrar para cuando sera cada una de estas.</h2>
-        <a href="Login.jsp" >Iniciar Session</a>
+        <a href="LoginMaestro.jsp" >Iniciar Session como Maestro</a>
+        <a href="LoginAlumno.jsp" >Iniciar Session como Alumno</a>
+        <br/>
         <br/>
         <a href="Registrar.jsp" >Registrar</a>
 
