@@ -47,6 +47,14 @@ public class DataController extends HttpServlet {
                 session.setAttribute("Deberes", deberes);
                 response.sendRedirect("ProfileMaestro.jsp");  
             }
+            if(action.equals("search1")){
+                dto.setMateria(materiatxt);
+                dto.setDeber(debertxt);
+                dto.setFecha(fechatxt);
+                ArrayList<DataPOJO> deberes = dao.buscar(dto);
+                session.setAttribute("Deberes", deberes);
+                response.sendRedirect("ProfileAlumno.jsp");  
+            }
         
             if(action.equals("calificaciones")){
                 
@@ -72,6 +80,12 @@ public class DataController extends HttpServlet {
                 rd.include(request, response);
                 out.print("<font color='green'><b>Cambios Realizados Con Exito.</b></font>");
 
+            }
+            if(action.equals("calisE")){
+                String matricula = request.getParameter("matricula");
+                session.setAttribute("matricula", matricula);
+                response.sendRedirect("Calificaciones.jsp");
+               
             }
         }
     }

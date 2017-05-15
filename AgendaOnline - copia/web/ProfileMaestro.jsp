@@ -23,8 +23,8 @@
             <h3>Hola, Maestro</h3>
             <h4>Username: @<%= session.getAttribute("username")%></h4>
             <h4>Nombre: <%= nombre%></h4>
-            <h4>Carrera: <%= carrera%></h4>
-            <h4>Semestre: <%= semestre %></h4>
+            0<h4>Grado de estudios: <%= carrera%></h4>
+            
             <h4>Matricula: <%= matricula %></h4>
             <input type="hidden" value="insertarCalf" name="action">
             <input type="submit" value="ModificarCalif" name="" >
@@ -32,6 +32,7 @@
         </form>
         <input type="button" value="Insertar" onclick="mostrarInsertar()">
         <input type="button" value="Buscar" onclick="mostrarBuscar()">
+        
             <div id="buscarDeber" style='display:none;'>
                 <form action="DataController" method="POST">
                     <label>Materia: <input type="text" name="materiaEnv"/></label>

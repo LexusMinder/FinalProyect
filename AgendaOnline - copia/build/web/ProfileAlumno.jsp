@@ -41,51 +41,42 @@
             <input type="submit" name="action" value="calificaciones">
             <a href="LoginAlumno.jsp" >Cerrar Session</a>
         </form>
+        <input type="button" value="Buscar" onclick="mostrarBuscar()">
         
-        
-        
-        
-        <div>¿Que materias le gustaria revisar?</div>
-        <form action="DataAlumnoController" method=POST>
-            <select name ="materiaAlum">
-            <%-- for(Object o : deberesA){
-            DataPOJO tareaA = (DataPOJO) o;
-            --%>
-            <option value=""></option>
-                
-            
-            <%-- }--%>
-            </select>
-            <div>Si desea puede buscar por fecha :</div>
-            <label> Fecha de entrega: <input type="text" name="fechaAlum"></label>
-            <input type="submit" value="Buscar">
-            <input type="hidden" name="action" value="buscar">
-        </form>
-        <%--          
-        <%  }
-        }
-        %>
-        
-        <% if (session != null){
-           List deberesB = (List) session.getAttribute("DeberesA");
-            if(deberesB != null){
-                out.println("Resultados");
+        <div id="buscarDeber" style='display:none;'>
+            <form action="DataController" method="POST">
+                <label>Materia: <input type="text" name="materiaEnv"/></label>
+                <div>Si gusta puede buscar por fecha.</div>
+                <label>Fecha: <input type="text" name="fechaEnv"/></label>
+                <input type="submit" name="enviarCO">
+                <input type="hidden" name="action" value="search1">
+             </form>
+         </div>
+        <script type="text/javascript">
+           function mostrarBuscar(){
+              document.getElementById('buscarDeber').style.display = 'block';
+           }
+           
+        </script>
+         <% if (session != null){
+           List deberes = (List) session.getAttribute("Deberes");
+            if(deberes != null){
+                System.out.println("Resultados");
           %>
-          
-          <table border="1">
+        <table border="1">
             <tr>
                 <td>Materia</td>
                 <td>Deberes</td>
                 <td>Fecha</td>
                 
             </tr>
-        <% for(Object o : deberesB){
-            DataPOJO deber = (DataPOJO) o;
+        <% for(Object o : deberes){
+            DataPOJO comentario = (DataPOJO) o;
         %>    
             <tr>
-                <td><%=deber.getMateria()%></td>
-                <td><%=deber.getDeber()%></td>
-                <td><%=deber.getFecha()%></td>
+                <td><%=comentario.getMateria()%></td>
+                <td><%=comentario.getDeber()%></td>
+                <td><%=comentario.getFecha()%></td>
             </tr>
             <% }%>
             
@@ -94,6 +85,6 @@
         <%  }
         }
         %>
-        --%>       
+      
        </body>
 </html>

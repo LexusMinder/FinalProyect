@@ -112,7 +112,7 @@ public class DataDAO {
         try{
            abrirConexion();
            log1.write("Se abrio conexion par buscar");
-           String insert = "update REGISTROESTUDIANTES set EXAMEN1 = "+ examen1 + ", EXAMEN2 = "+ examen2 +", EXAMEN3 = "+ examen3 +", TAREAS= "+ tareas +", PROYECTOF = " + proyecto +"  where USERNAME = '"+ username + "'" ;        
+             String insert = "update REGISTROESTUDIANTES set EXAMEN1 = "+ examen1 + ", EXAMEN2 = "+ examen2 +", EXAMEN3 = "+ examen3 +", TAREAS= "+ tareas +", PROYECTOF = " + proyecto +"  where USERNAME = '"+ username + "'" ;
            Statement stmt = conexion.createStatement();
            stmt.executeUpdate(insert);
            cerrarConexion();
